@@ -6,7 +6,6 @@ Zombie	*newZombie(std::string name)
 	return (new_Z);
 }
 
-Zombie::Zombie(std::string name_Z)
-{
-	Zombie::name = name_Z;
+Zombie::Zombie(std::string name_Z){
+	name = name_Z;
 }

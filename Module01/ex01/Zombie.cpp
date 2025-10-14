@@ -1,11 +1,8 @@
 #include "Zombie.hpp"
 
-int	main(void)
+void	Zombie::announce(void)
 {
-	std::string name = "amal";
-	Zombie *new_z = newZombie(name);
-	delete(new_z);
-	randomChump(name);
+	std::cout << Zombie::name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 Zombie::~Zombie(void){
