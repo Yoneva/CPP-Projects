@@ -8,5 +8,5 @@ class Weapon{
 		std::string type;
 	public:
 		std::string	getType();
-		void		setType();
+		void		setType(std::string type);
 };

@@ -9,6 +9,6 @@ class HumanA {
 		std::string	Weapon;
 	public:
 		void	attack();
-		HumanA();
+		HumanA(std::string W_Type);
 		~HumanA();
 };
