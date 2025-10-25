@@ -1,14 +1,14 @@
 #pragma once
 
+# include "Weapon.hpp"
 # include <iostream>
 # include <iomanip>
 
 class HumanA {
 	private:
 		std::string	name;
-		std::string	Weapon;
+		Weapon	&Weaponn;
 	public:
 		void	attack();
-		HumanA(std::string W_Type);
-		~HumanA();
+		HumanA(std::string name, Weapon &wep);
 };

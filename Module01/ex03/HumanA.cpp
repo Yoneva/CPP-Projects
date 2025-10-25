@@ -2,11 +2,7 @@
 
 void HumanA::attack()
 {
-	std::cout << HumanA::name << " attacks with their " << HumanA::Weapon << std::endl;
+	std::cout << name << " attacks with their " << Weaponn.getType() << std::endl;
 }
 
-HumanA::HumanA(std::string W_Type)
-{
-	Weapon = W_Type;
-	name = "Amal";
-}
+HumanA::HumanA(std::string name, Weapon &wep): name(name), Weaponn(wep){}

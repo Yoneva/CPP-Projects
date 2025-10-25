@@ -2,10 +2,14 @@
 
 void HumanB::attack()
 {
-	std::cout << HumanB::name << " attacks with their " << HumanB::Weapon << std::endl;
+	if (Weaponn)
+		std::cout << name << " attacks with their " << Weaponn->getType() << std::endl;
+	else
+		std::cout << name << " has no Weapon T-T" << std::endl;
 }
 
-HumanB::HumanB()
+void	HumanB::setWeapon(Weapon &wep)
 {
-	name = "Badr";
+	Weaponn = &wep;
 }
+HumanB::HumanB(std::string name):name(name){}
