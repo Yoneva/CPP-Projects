@@ -4,6 +4,7 @@ int	main(void)
 {
 	std::string name = "amal";
 	Zombie *new_z = newZombie(name);
+	new_z->announce();
 	delete(new_z);
 	randomChump(name);
 }

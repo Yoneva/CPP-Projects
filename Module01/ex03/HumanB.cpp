@@ -1,8 +1,9 @@
 #include "HumanB.hpp"
 
+
 void HumanB::attack()
 {
-	if (Weaponn)
+	if (!Weaponn->getType().empty())
 		std::cout << name << " attacks with their " << Weaponn->getType() << std::endl;
 	else
 		std::cout << name << " has no Weapon T-T" << std::endl;

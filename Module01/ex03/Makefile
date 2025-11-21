@@ -1,5 +1,5 @@
 NAME = Violence
-CXXFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror 
 FILES = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJS = $(FILES:.cpp=.o)
 
