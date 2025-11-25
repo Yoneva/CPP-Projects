@@ -2,11 +2,15 @@ NAME = Zombie
 CXXFLAGS = -Wall -Wextra -Werror
 FILES =  Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 OBJS = $(FILES:.cpp=.o)
+HEADER = Zombie.hpp
 
 all : $(NAME)
 
 $(NAME): $(OBJS)
 	c++ $(OBJS) $(FLAGS) -o $(NAME)
+
+%.o: %.cpp $(HEADER)
+	c++ $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)

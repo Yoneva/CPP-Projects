@@ -2,7 +2,7 @@
 
 int main()
 {
-	std::string complain = "DEBUG";
+	std::string complain = "ERROR";
 	Harl m3sb;
 	m3sb.complain(complain);
 }

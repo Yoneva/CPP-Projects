@@ -33,5 +33,5 @@ void	Harl::complain(std::string level)
 			return ;
 		}
 	}
-	std::cout << "Harl has no words for this *too stunned to speak*" << std::endl;
+	std::cout << "*too stunned to speak*" << std::endl;
 }

@@ -2,7 +2,6 @@
 
 # include "Weapon.hpp"
 # include <iostream>
-# include <iomanip>
 
 class HumanA {
 	private:

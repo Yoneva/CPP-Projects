@@ -7,6 +7,7 @@ int	main(void)
 	new_z->announce();
 	delete(new_z);
 	randomChump(name);
+	
 }
 
 Zombie::~Zombie(void){

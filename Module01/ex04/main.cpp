@@ -5,7 +5,8 @@ int	main(int ac, char **av)
 	if (ac != 4 )
 		return (1);
 	std::ifstream inputStream(av[1]);
-	std::ofstream outputStream("replaced.replace");
+	std::string output = av[1];
+	std::ofstream outputStream(output + ".replace");
 	if (!inputStream.is_open() || !outputStream.is_open())
 	{
 		std::cerr << "Couldn't open this file, try again!!" << std::endl;

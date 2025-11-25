@@ -24,13 +24,17 @@ void	Harl::error(void)
 
 void	Harl::complain(std::string level)
 {
-	int	index;
+	int	index = 0;
+	std::string cases[] = {"DEBUG","INFO","WARNING","ERROR"};
 
-	if (level == "DEBUG") index = 0;
-	else if (level == "INFO") index = 1;
-	else if (level == "WARNING") index = 2;
-	else if (level == "ERROR") index = 3;
-	else index = -1;
+	for (int i = 0; i < 4; i++)
+	{
+		if(cases[i] == level)
+		{
+			index = i;
+			break;
+		}
+	}
 	switch (index)
 	{
 		default:
