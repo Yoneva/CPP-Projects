@@ -17,9 +17,9 @@ Fixed&	Fixed::operator=(const Fixed &c){
 	return (*this);
 }
 
-std::ostream&	Fixed::operator<<(std::ostream& os){
-	os << this->toInt();
-	return os;
+std::ostream&	operator<<(std::ostream& os, const Fixed& f){
+	os << f.toFloat();
+	return (os);
 }
 
 Fixed::Fixed()
@@ -35,16 +35,16 @@ float	Fixed::toFloat(void) const
 
 int		Fixed::toInt(void) const
 {
-	return (roundf(number * (1 << bits)));
+	return (roundf(number >> bits));
 }
 
 Fixed::Fixed(const float n){
-	number = n * (1 << bits);
+	number = roundf(n * (1 << bits));
 	std::cout << "Float constructor called" << std::endl;
 }
 
 Fixed::Fixed(const int n){
-	setRawBits(n);
+	number = n << bits;
 	std::cout << "Int constructor called" << std::endl;
 }
 
