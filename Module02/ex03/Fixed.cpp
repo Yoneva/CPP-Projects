@@ -1,12 +1,12 @@
 #include "Fixed.hpp"
 
 //seter/geter
-void Fixed::setRawBits(int const raw)
+void	Fixed::setRawBits(int const raw)
 {
 	number = raw;
 }
 
-int Fixed::getRawBits(void){
+int	Fixed::getRawBits(void){
 	return (number);
 }
 

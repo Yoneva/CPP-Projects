@@ -2,7 +2,7 @@ NAME = Fixed
 CXXFLAGS = -Wall -Wextra -Werror -fsanitize=
 FILES =  Fixed.cpp main.cpp
 OBJS = $(FILES:.cpp=.o)
-HEADER = Zombie.hpp
+HEADER = Fixed.hpp
 
 all : $(NAME)
 

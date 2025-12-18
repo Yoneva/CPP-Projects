@@ -1,8 +1,8 @@
 NAME = Fixed
 CXXFLAGS = -Wall -Wextra -Werror -fsanitize=
-FILES =  Fixed.cpp main.cpp
+FILES =  Fixed.cpp main.cpp bsp.cpp Point.cpp
 OBJS = $(FILES:.cpp=.o)
-HEADER = Zombie.hpp
+HEADER = Fixed.hpp Point.hpp
 
 all : $(NAME)
 
