@@ -19,5 +19,5 @@ int main(){
 	std::cout << "p3 inside triangle: " << bsp(a, b, c, p3) << std::endl;
 	std::cout << "p4 inside triangle: " << bsp(a, b, c, p4) << std::endl;
 
-	return 0;
+	return (0);
 }

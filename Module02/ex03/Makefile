@@ -1,5 +1,5 @@
 NAME = Fixed
-CXXFLAGS = -Wall -Wextra -Werror -fsanitize=
+CXXFLAGS = -Wall -Wextra -Werror
 FILES =  Fixed.cpp main.cpp bsp.cpp Point.cpp
 OBJS = $(FILES:.cpp=.o)
 HEADER = Fixed.hpp Point.hpp

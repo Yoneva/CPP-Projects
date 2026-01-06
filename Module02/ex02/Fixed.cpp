@@ -53,15 +53,18 @@ Fixed	Fixed::operator-(const Fixed &c){
 	return (tmp);
 }
 
-Fixed	Fixed::operator*(const Fixed &c){
-	Fixed tmp;
-	tmp.number = (this->number * c.number) >> bits;
+Fixed	Fixed::operator*(const Fixed &c)
+{
+	Fixed	tmp;
+	long long result = (long long)this->number * c.number;
+	tmp.number = result >> bits;
 	return (tmp);
 }
 
 Fixed	Fixed::operator/(const Fixed &c){
-	Fixed tmp;
-	tmp.number = (this->number << bits) / c.number;
+	Fixed	tmp;
+	long long result = ((long long)this->number << bits) / c.number;
+	tmp.number = result;
 	return (tmp);
 }
 
