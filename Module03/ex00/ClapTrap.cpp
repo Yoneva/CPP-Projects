@@ -58,6 +58,7 @@ ClapTrap::ClapTrap(const ClapTrap& other){
 	this->HP = other.HP;
 	this->EP = other.EP;
 	this->AD = other.AD;
+	std::cout << "ClapTrap copy player " << this->name << " has been summoned" << std::endl;
 }
 
 ClapTrap::ClapTrap() : name("cinamoroll"), HP(10), EP(10), AD(0){

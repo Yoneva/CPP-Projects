@@ -2,8 +2,12 @@
 
 FragTrap&	FragTrap::operator=(const FragTrap& other)
 {
-	if (this != &other)
+	if (this != &other){
 		FragTrap::operator=(other);
+		HP = other.HP;
+		EP = other.EP;
+		AD = other.AD;
+	}
 	return (*this);
 }
 
@@ -24,9 +28,7 @@ void	FragTrap::attack(const std::string& target){
 	EP -= 1;
 }
 
-FragTrap::FragTrap()
-{
-	name = "Hello kitty";
+FragTrap::FragTrap(){
     HP = 100;
     EP = 100;
     AD = 30;
@@ -34,11 +36,13 @@ FragTrap::FragTrap()
 }
 
 FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other){
-	*this = other;
+	HP = other.HP;
+	EP = other.EP;
+	AD = other.AD;
+	std::cout << "FragTrap copy player " << this->name << " has been summoned" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name): ClapTrap(name){
-	this->name = name;
 	HP = 100;
 	EP = 100;
 	AD = 30;

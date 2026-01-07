@@ -26,18 +26,17 @@ void	ScavTrap::attack(const std::string& target){
 
 ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other){
 	*this = other;
+	std::cout << "ScavTrap copy player " << this->name << " has been summoned" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name){
-	this->name = name;
 	HP = 100;
 	EP = 50;
 	AD = 20;
 	std::cout << "ScavTrap player " << this->name << " has been summoned" << std::endl;
 }
 
-ScavTrap::ScavTrap()
-{
+ScavTrap::ScavTrap(){
 	name = "Kuromi";
 	HP = 100;
 	EP = 50;

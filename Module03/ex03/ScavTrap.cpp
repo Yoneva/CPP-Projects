@@ -2,8 +2,12 @@
 
 ScavTrap&	ScavTrap::operator=(const ScavTrap& other)
 {
-	if (this != &other)
+	if (this != &other){
 		ClapTrap::operator=(other);
+		HP = other.HP;
+		EP = other.EP;
+		AD = other.AD;
+	}
 	return (*this);
 }
 
@@ -25,24 +29,24 @@ void	ScavTrap::attack(const std::string& target){
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other){
-	*this = other;
+	HP = other.HP;
+    EP = other.EP;
+    AD = other.AD;
+	std::cout << "ScavTrap copy player " << this->name << " has been summoned" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name){
-	this->name = name;
 	HP = 100;
 	EP = 50;
 	AD = 20;
 	std::cout << "ScavTrap player " << this->name << " has been summoned" << std::endl;
 }
 
-ScavTrap::ScavTrap()
-{
-	name = "Kuromi";
-    HP = 100;
-    EP = 50;
-    AD = 20;
-    std::cout << "ScavTrap player " << this->name << " has been summoned" << std::endl;
+ScavTrap::ScavTrap(){
+	HP = 100;
+	EP = 50;
+	AD = 20;
+	std::cout << "ScavTrap player " << this->name << " has been summoned" << std::endl;
 }
 
 ScavTrap::~ScavTrap(){

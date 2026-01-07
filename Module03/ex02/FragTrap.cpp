@@ -26,7 +26,7 @@ void	FragTrap::attack(const std::string& target){
 
 FragTrap::FragTrap()
 {
-	name = "Hello kitty";
+	name = "cinamoroll";
     HP = 100;
     EP = 100;
     AD = 30;
@@ -35,10 +35,10 @@ FragTrap::FragTrap()
 
 FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other){
 	*this = other;
+	std::cout << "FragTrap copy player " << this->name << " has been summoned" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name): ClapTrap(name){
-	this->name = name;
 	HP = 100;
 	EP = 100;
 	AD = 30;
