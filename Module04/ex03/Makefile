@@ -1,8 +1,9 @@
-NAME = Zoo
+NAME = Materia
 CXXFLAGS = -Wall -Wextra -Werror
-FILES =  main.cpp animal.cpp dog.cpp cat.cpp
+FILES = main.cpp AMateria.cpp ice.cpp cure.cpp Character.cpp MateriaSource.cpp
 OBJS = $(FILES:.cpp=.o)
-HEADER = animal.hpp dog.hpp cat.hpp
+HEADER = AMateria.hpp Character.hpp cure.hpp ice.hpp \
+		 ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp
 
 all : $(NAME)
 

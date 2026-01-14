@@ -5,19 +5,27 @@ void	Dog::makeSound() const{
 }
 
 Dog& Dog::operator=(const Dog& other){
-	if (this != &other)
+	if (this != &other){
 		type = other.type;
+		delete (ideas);
+		ideas = new Brain(*other.ideas);
+	}
 	return *this;
 }
 
 Dog::Dog(){
+	std::cout << "Dog is here" << std::endl;
+	ideas = new Brain();
 	setType("Dog");
 }
 
 Dog::Dog(const Dog& an){
-	*this = an;
+	std::cout << "Dog is here" << std::endl;
+	type = an.type;
+	ideas = new Brain(*an.ideas);
 }
 
 Dog::~Dog(){
+	delete (ideas);
 	std::cout << "Dog is dead" << std::endl;
 }
