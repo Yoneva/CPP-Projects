@@ -1,6 +1,6 @@
 NAME = Materia
 CXXFLAGS = -Wall -Wextra -Werror
-FILES = main.cpp AMateria.cpp ice.cpp cure.cpp Character.cpp MateriaSource.cpp
+FILES = main.cpp AMateria.cpp ice.cpp cure.cpp Character.cpp MateriaSource.cpp ICharacter.cpp IMateriaSource.cpp
 OBJS = $(FILES:.cpp=.o)
 HEADER = AMateria.hpp Character.hpp cure.hpp ice.hpp \
 		 ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp

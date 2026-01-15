@@ -13,6 +13,16 @@ AMateria::AMateria(){
 	Type = "";
 }
 
+AMateria::AMateria(const AMateria& other){
+	Type = other.Type;
+}
+
+AMateria& AMateria::operator=(const AMateria& other){
+	if (this != &other)
+		Type = other.Type;
+	return *this;
+}
+
 AMateria::~AMateria(){}
 
 void AMateria::use(ICharacter& target){
