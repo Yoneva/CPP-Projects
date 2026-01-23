@@ -3,16 +3,17 @@
 
 int	main(){
 	std::cout << "=== Valid bureaucrat ===" << std::endl;
+	
 	Bureaucrat alice("Alice", 50);
 	std::cout << alice << std::endl;
-	alice.incrementGrade(5);
+	alice.incrementGrade();
 	std::cout << alice << std::endl;
 
 	std::cout << "\n=== Exception: Grade too high ===" << std::endl;
 	try{
-		Bureaucrat boss("Boss", 2);
+		Bureaucrat boss("Boss", 1);
 		std::cout << boss << std::endl;
-		boss.incrementGrade(5);
+		boss.incrementGrade();
 	}
 	catch(const Bureaucrat::GradeTooHighException& e){
 		std::cout << "Exception caught: " << e.what() << std::endl;
@@ -22,13 +23,14 @@ int	main(){
 	try{
 		Bureaucrat intern("Intern", 149);
 		std::cout << intern << std::endl;
-		intern.lowerGrade(5);
+		intern.lowerGrade();
 	}
 	catch(const Bureaucrat::GradeTooLowException& e){
 		std::cout << "Exception caught: " << e.what() << std::endl;
 	}
 
 	std::cout << "\n=== Copy constructor test ===" << std::endl;
+
 	Bureaucrat bob("Bob", 100);
 	Bureaucrat bobCopy(bob);
 	std::cout << bob << std::endl;
