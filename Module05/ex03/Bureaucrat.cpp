@@ -50,7 +50,7 @@ std::string	Bureaucrat::getName() const{
 }
 
 void	Bureaucrat::lowerGrade(){
-	if(grade - 1 > 150)
+	if(grade + 1 > 150)
 		throw GradeTooLowException();
 	grade++;
 }
