@@ -21,17 +21,14 @@ class Bureaucrat{
 		void	lowerGrade();
 		void	incrementGrade();
 
-		class GradeTooHighException : public std::exception {
+	class GradeTooHighException : public std::exception {
 		public:
-			const char* what() const throw() {
-				return "Grade too high";
-			}
-		};
-		class GradeTooLowException : public std::exception {
+			const char* what() const throw();
+	};
+	class GradeTooLowException : public std::exception {
 		public:
-			const char* what() const throw() {
-				return "Grade too low";
-			}
-		};
+			const char* what() const throw();
+	};
 };
+
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);

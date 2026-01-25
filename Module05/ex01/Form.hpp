@@ -11,6 +11,7 @@ class Form {
 		const int Egrade;
 	public:
 		Form();
+		Form(std::string na, int sg, int eg);
 		Form(const Form& other);
 		Form& operator=(const Form& other);
 		~Form();
@@ -22,15 +23,14 @@ class Form {
 		int		getEgrade() const;
 		bool	getStatus() const;
 
-		class GradeTooHighException : public std::exception {
+	class GradeTooHighException : public std::exception {
 		public:
-			const char* what() const throw(){ return "Form grade too high"; }
-		};
-		class GradeTooLowException : public std::exception {
+			const char* what() const throw();
+	};
+	class GradeTooLowException : public std::exception {
 		public:
-			const char* what() const throw(){ return "Form grade too low"; }
-		};
-
+			const char* what() const throw();
+	};
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& f);

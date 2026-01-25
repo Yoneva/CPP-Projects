@@ -1,10 +1,10 @@
 NAME = Bureaucrat
 CXXFLAGS = -Wall -Wextra -Werror
 FILES =  main.cpp Bureaucrat.cpp AForm.cpp RobotomyRequestForm.cpp \
-		 ShrubberyCreationForm.cpp PresidentialPardonForm.cpp
+		 ShrubberyCreationForm.cpp PresidentialPardonForm.cpp Intern.cpp
 OBJS = $(FILES:.cpp=.o)
 HEADER = Bureaucrat.hpp AForm.hpp RobotomyRequestForm.hpp \
-		 ShrubberyCreationForm.hpp PresidentialPardonForm.hpp
+		 ShrubberyCreationForm.hpp PresidentialPardonForm.hpp Intern.hpp
 
 all : $(NAME)
 

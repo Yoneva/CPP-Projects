@@ -48,14 +48,14 @@ std::ostream& operator<<(std::ostream& os, const AForm& f){
 	return (os);
 }
 
-const char*	AForm::GradeTooHighException::what() const throw() {
+const char* AForm::GradeTooHighException::what() const throw() {
 	return "grade too high";
 }
 
-const char*	AForm::FormNotSignedException::what() const throw() {
+const char* AForm::FormNotSignedException::what() const throw() {
 	return "Form not signed";
 }
 
-const char*	AForm::GradeTooLowException::what() const throw() {
+const char* AForm::GradeTooLowException::what() const throw() {
 	return "grade too low";
 }
