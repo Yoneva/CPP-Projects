@@ -1,8 +1,9 @@
 #pragma once
 
 #include <iostream>
-#include <map>
-#include <fstream>
-#include <sstream>
+#include <stack>
 #include <iomanip>
+#include <cctype>
+#include <cstdlib>
 
+int	RPN(char **av);

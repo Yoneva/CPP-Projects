@@ -22,7 +22,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat& executor) const{
 	if (executor.getGrade() > getEgrade())
 		throw GradeTooLowException();
 
-	std::ofstream file(getName() + "_shrubbery");
+	std::ofstream file(target + "_shrubbery");
 	if (!file.is_open())
 		throw std::runtime_error("Could not create file");
 
